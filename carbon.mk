@@ -12,11 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+DEVICE_PATH := device/sony/aries_aosp
+
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/sony/msm
 
 # Inherit AOSP Shinano common device parts
-$(call inherit-product, device/sony/sirius/aosp_d5803.mk)
+$(call inherit-product, $(DEVICE_PATH)/aosp_d5803.mk)
 
 # Inherit Omni Shinano common device parts
 $(call inherit-product, device/sony/shinano-common/device_omni.mk)
@@ -26,8 +28,9 @@ $(call inherit-product, vendor/carbon/config/common_phone.mk)
 
 # Recovery
 PRODUCT_COPY_FILES += \
-    device/sony/aries/recovery/root/etc/bootrec-device:recovery/root/etc/bootrec-device
+    $(DEVICE_PATH)/recovery/root/etc/bootrec-device:recovery/root/etc/bootrec-device
 
 # Override Product Name for CarbonROM
-PRODUCT_NAME := carbon_aries-aosp
+PRODUCT_DEVICE := aries_aosp
+PRODUCT_NAME := carbon_aries_aosp
 PRODUCT_MODEL := Xperia Z3 Compact
