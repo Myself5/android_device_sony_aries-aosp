@@ -39,4 +39,4 @@ PRODUCT_NAME := cm_aries_aosp
 PRODUCT_MODEL := Xperia Z3 Compact
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := D5803,D5833,z3c,aries
+TARGET_OTA_ASSERT_DEVICE := D5803,D5833,z3c,aries,aries_aosp
